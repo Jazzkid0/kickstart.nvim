@@ -1,14 +1,18 @@
 # kickstart.nvim
 
-## Introduction
+The jazzkid edit
 
-A starting point for Neovim that is:
+original repo at https://github.com/nvim-lua/kickstart.nvim 
 
-* Small
-* Single-file
-* Completely Documented
+Added a few plugins, but kept it very lightweight.
+especially if you turn copilot off
 
-**NOT** a Neovim distribution, but instead a starting point for your configuration.
+also made things modular
+
+go wild copying this if you've decided to trust my config taste
+be wary that I use a weird keyboard so the default keymaps will suck for you
+
+btw I've removed all info about non linux installs in case I broke something lol
 
 ## Installation
 
@@ -22,7 +26,8 @@ If you are experiencing issues, please make sure you have the latest versions.
 ### Install External Dependencies
 
 > **NOTE** 
-> [Backup](#FAQ) your previous configuration (if any exists)
+> This is your reminder to backup your previous config
+> I prefer to do this by changing the dirname i.e. `mv ~/.config/nvim ~/.config/nvim_backup`
 
 External Requirements:
 - Basic utils: `git`, `make`, `unzip`, C Compiler (`gcc`)
@@ -32,41 +37,14 @@ External Requirements:
   - If want to write Golang, you will need `go`
   - etc.
 
-> **NOTE**
-> See [Windows Installation](#Windows-Installation) to double check any additional Windows notes
-
-Neovim's configurations are located under the following paths, depending on your OS:
-
-| OS | PATH |
-| :- | :--- |
-| Linux, MacOS | `$XDG_CONFIG_HOME/nvim`, `~/.config/nvim` |
-| Windows (cmd)| `%userprofile%\AppData\Local\nvim\` |
-| Windows (powershell)| `$env:USERPROFILE\AppData\Local\nvim\` |
-
 ### Install Kickstart
 
 Clone kickstart.nvim:
 
-<details><summary> Linux and Mac </summary>
+<details><summary> Linux </summary>
 
 ```sh
-git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
-```
-
-</details>
-
-<details><summary> Windows </summary>
-
-If you're using `cmd.exe`:
-
-```
-git clone https://github.com/nvim-lua/kickstart.nvim.git %userprofile%\AppData\Local\nvim\ 
-```
-
-If you're using `powershell.exe`
-
-```
-git clone https://github.com/nvim-lua/kickstart.nvim.git $env:USERPROFILE\AppData\Local\nvim\ 
+git clone https://github.com/nvim-lua/kickstart.nvim.git $HOME/.config}/nvim
 ```
 
 </details>
@@ -182,37 +160,4 @@ return {
   * Discussions on this topic can be found here:
     * [Restructure the configuration](https://github.com/nvim-lua/kickstart.nvim/issues/218)
     * [Reorganize init.lua into a multi-file setup](https://github.com/nvim-lua/kickstart.nvim/pull/473)
-
-### Windows Installation
-
-Installation may require installing build tools, and updating the run command for `telescope-fzf-native`
-
-See `telescope-fzf-native` documentation for [more details](https://github.com/nvim-telescope/telescope-fzf-native.nvim#installation)
-
-This requires:
-
-- Install CMake, and the Microsoft C++ Build Tools on Windows
-
-```lua
-{'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
-```
-
-Alternatively one can install gcc and make which don't require changing the config,
-the easiest way is to use choco:
-
-1. install [chocolatey](https://chocolatey.org/install)
-either follow the instructions on the page or use winget,
-run in cmd as **admin**:
-```
-winget install --accept-source-agreements chocolatey.chocolatey
-```
-
-2. install all requirements using choco, exit previous cmd and
-open a new one so that choco path is set, run in cmd as **admin**:
-```
-choco install -y neovim git ripgrep wget fd unzip gzip mingw make
-```
-
-Then continue with the [Install Kickstart](#Install-Kickstart) step.
-
 
