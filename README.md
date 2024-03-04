@@ -16,6 +16,8 @@ btw I've removed all info about non linux installs in case I broke something lol
 
 ## Installation
 
+If you only want a few of the changes I've made, most of my commits shouldn't conflict. Pick and choose!
+
 ### Install Neovim
 
 Kickstart.nvim targets *only* the latest
