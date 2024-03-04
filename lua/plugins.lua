@@ -66,6 +66,8 @@ require('lazy').setup {
 
   require 'custom/plugins/statusline',
 
+  require 'custom/plugins/file-browser',
+
   -- Copilot
   require 'custom/plugins/copilot',
   require 'custom/plugins/copilot-cmp',
