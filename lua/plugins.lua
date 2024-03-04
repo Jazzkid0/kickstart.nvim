@@ -63,4 +63,6 @@ require('lazy').setup {
   require 'custom/plugins/fugitive',
 
   require 'custom/plugins/undotree',
+
+  require 'custom/plugins/statusline',
 }
