@@ -57,4 +57,6 @@ require('lazy').setup {
   -- [[ Custom plugins in lua/custom/ ]]
 
   require 'custom/plugins/harpoon',
+
+  require 'custom/plugins/catppuccin',
 }
