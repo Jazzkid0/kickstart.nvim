@@ -65,4 +65,8 @@ require('lazy').setup {
   require 'custom/plugins/undotree',
 
   require 'custom/plugins/statusline',
+
+  -- Copilot
+  require 'custom/plugins/copilot',
+  require 'custom/plugins/copilot-cmp',
 }
