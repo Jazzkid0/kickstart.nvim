@@ -54,11 +54,13 @@ require('lazy').setup {
   require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
 
-  -- [[ Custom plugins in lua/custom/ ]]
+  -- [[ Custom plugins in lua/custom/plugins/ ]]
 
   require 'custom/plugins/harpoon',
 
   require 'custom/plugins/catppuccin',
 
   require 'custom/plugins/fugitive',
+
+  require 'custom/plugins/undotree',
 }
