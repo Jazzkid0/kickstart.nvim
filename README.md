@@ -41,13 +41,10 @@ External Requirements:
 
 Clone kickstart.nvim:
 
-<details><summary> Linux </summary>
-
 ```sh
-git clone https://github.com/nvim-lua/kickstart.nvim.git $HOME/.config}/nvim
+git clone https://github.com/jazzkid0/kickstart.nvim.git $HOME/.config}/nvim
 ```
 
-</details>
 
 ### Post Installation
 
