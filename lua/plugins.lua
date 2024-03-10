@@ -64,6 +64,8 @@ require('lazy').setup {
 
   require 'custom/plugins/statusline',
 
+  -- Telescope stuff I'm trying out for now, might remove later
+
   require 'custom/plugins/file-browser',
 
   -- Copilot
