@@ -19,6 +19,9 @@ return {
 
     -- Use nerd font icons
     { 'nvim-tree/nvim-web-devicons' },
+
+    -- Enable gh cli extension
+    { 'nvim-telescope/telescope-github.nvim' },
   },
   config = function()
     -- The easiest way to use telescope, is to start by doing something like:
@@ -41,6 +44,7 @@ return {
     -- Enable telescope extensions, if they are installed
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
+    pcall(require('telescope').load_extension, 'gh')
 
     -- See `:help telescope.builtin`
     local builtin = require 'telescope.builtin'
@@ -85,8 +89,6 @@ return {
       }
     end, { desc = '[S]earch [/] in Open Files' })
 
-    -- Also possible to pass additional configuration options.
-    --  See `:help telescope.builtin.live_grep()` for information about particular keys
     vim.keymap.set('n', '<leader>p/', function()
       builtin.live_grep {
         grep_open_files = true,
@@ -99,9 +101,25 @@ return {
       builtin.find_files { cwd = vim.fn.stdpath 'config' }
     end, { desc = '[S]earch [N]eovim files' })
 
-    -- Shortcut for searching your neovim configuration files
     vim.keymap.set('n', '<leader>pn', function()
       builtin.find_files { cwd = vim.fn.stdpath 'config' }
     end, { desc = '[S]earch [N]eovim files' })
+
+    -- Github cli shortcuts
+    vim.keymap.set('n', '<leader>gi', function()
+      builtin.gh_issues { author = 'nvim-telescope' }
+    end, { desc = '[G]ithub [I]ssues' })
+
+    vim.keymap.set('n', '<leader>gp', function()
+      builtin.gh_pull_request { author = 'nvim-telescope' }
+    end, { desc = '[G]ithub [P]ull requests' })
+
+    vim.keymap.set('n', '<leader>gg', function()
+      builtin.gh_gists { author = 'nvim-telescope' }
+    end, { desc = '[G]ithub [G]ists' })
+
+    vim.keymap.set('n', '<leader>gr', function()
+      builtin.gh_run { author = 'nvim-telescope' }
+    end, { desc = '[G]ithub [R]un' })
   end,
 }
