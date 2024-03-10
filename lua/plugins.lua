@@ -58,8 +58,6 @@ require('lazy').setup {
 
   require 'custom/plugins/harpoon',
 
-  require 'custom/plugins/catppuccin',
-
   require 'custom/plugins/fugitive',
 
   require 'custom/plugins/undotree',
