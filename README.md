@@ -39,12 +39,14 @@ External Requirements:
   - If want to write Golang, you will need `go`
   - etc.
 
-### Install Kickstart
+### Install my personal config
+
+Note: you'll want to fork mine and install it as yours instead of doing this.
 
 Clone kickstart.nvim:
 
 ```sh
-git clone https://github.com/jazzkid0/kickstart.nvim.git $HOME/.config}/nvim
+git clone https://github.com/jazzkid0/kickstart.nvim.git $HOME/.config/nvim
 ```
 
 
