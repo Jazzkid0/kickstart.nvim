@@ -7,10 +7,12 @@ original repo at https://github.com/nvim-lua/kickstart.nvim
 Added a few plugins, but kept it very lightweight.
 especially if you turn copilot off
 
-also made things modular
+also made things modular bc its easier to sort custom plugins that way
 
 go wild copying this if you've decided to trust my config taste
-be wary that I use a weird keyboard so the default keymaps will suck for you
+be wary that I use a weird keyboard (colemak-dh) so the default keymaps will suck for you
+
+also I really can't promise the master branch might change drastically over time
 
 btw I've removed all info about non linux installs in case I broke something lol
 
@@ -39,12 +41,14 @@ External Requirements:
   - If want to write Golang, you will need `go`
   - etc.
 
-### Install Kickstart
+### Install my personal config
+
+Note: you'll want to fork mine and install it as yours instead of doing this.
 
 Clone kickstart.nvim:
 
 ```sh
-git clone https://github.com/jazzkid0/kickstart.nvim.git $HOME/.config}/nvim
+git clone https://github.com/jazzkid0/kickstart.nvim.git $HOME/.config/nvim
 ```
 
 
