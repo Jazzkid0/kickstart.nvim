@@ -6,7 +6,7 @@ return {
     local lualine = require 'lualine'
     lualine.setup {
       options = {
-        icons_enabled = true,
+        icons_enabled = false,
         theme = 'auto',
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
@@ -29,7 +29,7 @@ return {
         lualine_c = { 'diagnostics' },
         lualine_x = { 'filename' },
         lualine_y = { 'searchcount' },
-        lualine_z = { 'location' },
+        lualine_z = {},
       },
       inactive_sections = {
         lualine_a = {},

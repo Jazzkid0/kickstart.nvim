@@ -2,7 +2,7 @@
 
 The jazzkid edit
 
-original repo at https://github.com/nvim-lua/kickstart.nvim 
+If you're new, the original kickstart repo is a much better starting point: https://github.com/nvim-lua/kickstart.nvim 
 
 Added a few plugins, but kept it very lightweight.
 especially if you turn copilot off
