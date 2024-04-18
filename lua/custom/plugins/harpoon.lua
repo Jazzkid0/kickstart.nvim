@@ -8,33 +8,17 @@ return {
 
     harpoon:setup()
 
-    vim.keymap.set('n', '<leader>a', function()
-      harpoon:list():append()
-    end, { desc = 'Add file to harpoon' })
+    vim.keymap.set('n', '<leader>a', function() harpoon:list():add() end, { desc = 'Add file to harpoon' })
 
-    vim.keymap.set('n', '<M-m>', function()
-      harpoon.ui:toggle_quick_menu(harpoon:list())
-    end)
+    vim.keymap.set('n', '<M-m>', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
-    vim.keymap.set('n', '<M-n>', function()
-      harpoon:list():select(1)
-    end)
-    vim.keymap.set('n', '<M-e>', function()
-      harpoon:list():select(2)
-    end)
-    vim.keymap.set('n', '<M-i>', function()
-      harpoon:list():select(3)
-    end)
-    vim.keymap.set('n', '<M-o>', function()
-      harpoon:list():select(4)
-    end)
+    vim.keymap.set('n', '<M-n>', function() harpoon:list():select(1) end)
+    vim.keymap.set('n', '<M-e>', function() harpoon:list():select(2) end)
+    vim.keymap.set('n', '<M-i>', function() harpoon:list():select(3) end)
+    vim.keymap.set('n', '<M-o>', function() harpoon:list():select(4) end)
 
-    vim.keymap.set('n', '<M-,>', function()
-      harpoon:list():prev()
-    end)
-    vim.keymap.set('n', '<M-.>', function()
-      harpoon:list():next()
-    end)
+    vim.keymap.set('n', '<M-,>', function() harpoon:list():prev() end)
+    vim.keymap.set('n', '<M-.>', function() harpoon:list():next() end)
 
     -- basic telescope configuration
     local conf = require('telescope.config').values
@@ -56,8 +40,8 @@ return {
         :find()
     end
 
-    vim.keymap.set('n', '<C-e>', function()
+    vim.keymap.set('n', '<leader>ph', function()
       toggle_telescope(harpoon:list())
-    end, { desc = 'Open harpoon window' })
+    end, { desc = '[S]earch [H]arpoon buffers' })
   end,
 }
