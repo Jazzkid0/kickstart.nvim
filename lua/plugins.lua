@@ -48,23 +48,27 @@ require('lazy').setup {
 
   require 'kickstart/plugins/treesitter',
 
-  -- idrk what's going on with these ones lol
-  require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.indent_line',
 
   -- [[ Custom plugins in lua/custom/plugins/ ]]
 
+  -- The most important plugin
   require 'custom/plugins/harpoon',
 
+  -- Git integration with a misleading name
   require 'custom/plugins/fugitive',
 
+  -- Undo history and navigation
   require 'custom/plugins/undotree',
 
+  -- Had problems with the mini statusline
   require 'custom/plugins/statusline',
 
-  -- Telescope stuff I'm trying out for now, might remove later
-
+  -- A little more feature rich than netrw
   require 'custom/plugins/file-browser',
+
+  -- Trouble is a great plugin for managing diagnostics
+  require 'custom/plugins/trouble',
 
   -- Copilot
   require 'custom/plugins/copilot',
