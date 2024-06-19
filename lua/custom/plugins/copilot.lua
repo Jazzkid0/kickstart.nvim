@@ -7,9 +7,6 @@ return {
 
     copilot.setup()
     copilot.suggestion = {
-      enabled = true,
-      auto_trigger = true,
-      debounce = 75,
       keymap = {
         accept = "<M-l>",
         accept_line = "<M-'>",
@@ -20,10 +17,9 @@ return {
     }
     copilot.panel = { enabled = false }
     copilot.filetypes = {
-      yaml = false,
       markdown = true,
     }
-    copilot.copilot_node_command = 'bun'
+    copilot.copilot_node_command = 'node'
     copilot.server_opts_overrides = {}
   end,
 }
