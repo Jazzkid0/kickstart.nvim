@@ -70,7 +70,10 @@ require('lazy').setup {
   -- Trouble is a great plugin for managing diagnostics
   require 'custom/plugins/trouble',
 
+  -- Zen mode for writing prose and removing distractions
+  require 'custom/plugins/zen-mode',
+
   -- Copilot
   require 'custom/plugins/copilot',
-  require 'custom/plugins/copilot-cmp',
+  { 'AndreM222/copilot-lualine' },
 }
