@@ -27,7 +27,7 @@ return {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff' },
         lualine_c = { 'diagnostics' },
-        lualine_x = { 'filename' },
+        lualine_x = { 'copilot', 'filename' },
         lualine_y = { 'searchcount' },
         lualine_z = {},
       },
