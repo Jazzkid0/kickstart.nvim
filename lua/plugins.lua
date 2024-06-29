@@ -66,5 +66,5 @@ require('lazy').setup {
   require 'custom/plugins/zen-mode',
 
   -- Ding powered llm completion
-  require 'custom/plugins/llm',
+  require 'custom/plugins/copilot',
 }
