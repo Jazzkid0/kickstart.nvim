@@ -51,4 +51,4 @@ Mason will autoinstall requested LSPs and formatters etc.
 use `:Mason` to manage.
 
 Treesitter will parse code, allowing for syntax highlighting etc.
-`:TSInstall` [language] if it doesn't automatically do this.
+`:TSInstall [language]` if it doesn't automatically do this.
