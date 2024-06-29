@@ -1,4 +1,3 @@
--- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -6,14 +5,6 @@ if not vim.loop.fs_stat(lazypath) then
   vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
-
---  To check the current status of your plugins, run
---    :Lazy
---
---  You can press `?` in this menu for help. Use `:q` to close the window
---
---  To update plugins, you can run
---    :Lazy update
 
 require('lazy').setup {
 
@@ -52,28 +43,28 @@ require('lazy').setup {
 
   -- [[ Custom plugins in lua/custom/plugins/ ]]
 
-  -- The most important plugin
+  -- Non-negotiable.
   require 'custom/plugins/harpoon',
 
-  -- Git integration with a misleading name
+  -- Best featured git integration, awful ux lmao
   require 'custom/plugins/fugitive',
 
-  -- Undo history and navigation
+  -- Branching undo history
   require 'custom/plugins/undotree',
 
-  -- Had problems with the mini statusline
+  -- Exstensible statusline
   require 'custom/plugins/statusline',
 
-  -- A little more feature rich than netrw
+  -- File navigation.
+  -- TODO: Find a better visualisation with file creation and deletion only.
   require 'custom/plugins/file-browser',
 
-  -- Trouble is a great plugin for managing diagnostics
+  -- More powerful diagnostic management
   require 'custom/plugins/trouble',
 
   -- Zen mode for writing prose and removing distractions
   require 'custom/plugins/zen-mode',
 
-  -- Copilot
-  require 'custom/plugins/copilot',
-  { 'AndreM222/copilot-lualine' },
+  -- Ding powered llm completion
+  require 'custom/plugins/llm',
 }
