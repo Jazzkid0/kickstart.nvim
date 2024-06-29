@@ -9,6 +9,7 @@ Also it's modularised for easy plugin management.
 You will need to change keymaps. Mine are comfortable only for a colemak-dh 42 key split keyboard lmao.
 
 I'm constantly making breaking changes so just fork this and forget, don't try to update down the line bc everything will change.
+For example, copilot is broken right now lol. No clue why.
 
 ## Installation
 
