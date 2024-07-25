@@ -5,7 +5,7 @@ return {
   dependencies = {
     "MunifTanjim/nui.nvim",
     -- optional for notification view
-    -- "rcarriga/nvim-notify",
+    "rcarriga/nvim-notify",
   },
   config = function ()
     local noice = require("noice")
@@ -16,6 +16,9 @@ return {
         ["vim.lsp.util.stylize_markdown"] = true,
         ["cmp.entry.get_documentation"] = true,
         },
+        hover = {
+          silent = true,
+        },
       },
       presets = {
         bottom_search = true, -- bottom cmdline for search
@@ -24,6 +27,7 @@ return {
         inc_rename = false, -- inc-rename.nvim idk?
         lsp_doc_border = false, -- docs and signature help borders
       },
+      vim.keymap.set("n", "<leader>n", function() vim.cmd('Noice') end, { desc = "View [n]otificatoins" })
     }
   end,
 }
