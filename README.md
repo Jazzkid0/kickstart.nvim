@@ -1,10 +1,10 @@
 # jazzkid0/kickstart.nvim
 
-If you're new, the original kickstart repo is a much better starting point: https://github.com/nvim-lua/kickstart.nvim 
+If you're new, the original kickstart repo is a much better starting point: https://github.com/nvim-lua/kickstart.nvim
 
 My version has a few extra plugins, but it's still very lightweight and more importantly fast.
 
-Also it's modularised for easy plugin management.
+Also it's modularised for easy plugin management. There is a modular starting point at https://github.com/nvim-lua/kickstart-modular.nvim
 
 You will need to change keymaps. Mine are comfortable only for a colemak-dh 42 key split keyboard lmao.
 
