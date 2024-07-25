@@ -65,6 +65,9 @@ require('lazy').setup {
   -- Zen mode for writing prose and removing distractions
   require 'custom/plugins/zen-mode',
 
+  -- UI replacement for messages, cmdline, popupmenu
+  require 'custom/plugins/noice',
+
   -- Ding powered llm completion
   require 'custom/plugins/copilot',
 }
