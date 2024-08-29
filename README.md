@@ -1,3 +1,6 @@
+# nvim v2.8
+This is an old nvim config I kept configuring until I hated it. A much cleaner, simpler config can be found at [nvim 3.0](https://github.com/Jazzkid0/nvim)
+
 # jazzkid0/kickstart.nvim
 
 If you're new, the original kickstart repo is a much better starting point: https://github.com/nvim-lua/kickstart.nvim 
